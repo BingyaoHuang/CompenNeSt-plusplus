@@ -1,0 +1,9 @@
+src/python/venv
+src/python/.idea
+*.asv
+__pycache__
+*.mexw64
+
+
+src/bash
+src/matlab
