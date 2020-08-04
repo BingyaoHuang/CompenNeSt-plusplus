@@ -114,7 +114,7 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 7. Update `data_list` in [`train_compenNeSt++.py`](src/python/train_compenNeSt++.py) (or [`train_pre-trained_compenNeSt++.py`](src/python/train_pre-trained_compenNeSt++.py) that only requires 8 training images) and run the script.
 8. Project the compensated projector input images under `data_root/prj/cmp/test/[model]`.
    
-Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, the rest plain color  images are used by the original TPS w/ SL method, we don't need them to train CompenNeSt++. Similarly, `data_root/cam/raw/sl` and `data_root/cam/warpSL` are only used by two-step methods, e.g., [train_CompenNeSt_with_SL.py](src/python/train_CompenNeSt_with_SL.py).
+Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, the rest plain color  images are used by the original TPS w/ SL method, we don't need them to train CompenNeSt++. Similarly, `data_root/cam/raw/sl` and `data_root/cam/warpSL` are only used by two-step methods, e.g., [train_compenNeSt_with_SL.py](src/python/train_compenNeSt_with_SL.py).
 
 ----
 
