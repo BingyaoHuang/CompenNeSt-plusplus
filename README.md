@@ -1,7 +1,7 @@
 <!-- <img src='doc/train_animation.gif' align="right" width=300>
 <br><br> -->
 
-End-to-end Full Projector Compensation (submitted to T-PAMI)
+End-to-end Full Projector Compensation
 <br><br>
 ===
 
