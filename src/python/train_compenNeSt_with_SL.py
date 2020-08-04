@@ -1,5 +1,5 @@
 '''
-Training and testing script for CompenNeSt w/ SL (journal extension of cvpr'19 and iccv'19 papers)
+Training and testing script for two-step-based CompenNeSt w/ SL (journal extension of cvpr'19 and iccv'19 papers)
 
 This script trains/tests CompenNeSt w/ SL on different dataset specified in 'data_list' below.
 The detailed training options are given in 'train_option' below.
@@ -20,6 +20,12 @@ See trainNetwork.py for detailed training process.
 See utils.py for helper functions.
 
 Citation:
+    @article{huang2020endtoend,
+        title={End-to-end Full Projector Compensation},
+        author={Bingyao Huang and Tao Sun and Haibin Ling},
+        year={2020},
+        journal={arXiv preprint arXiv:2008.00965} }
+
     @inproceedings{huang2019compennet++,
         author = {Huang, Bingyao and Ling, Haibin},
         title = {CompenNet++: End-to-end Full Projector Compensation},

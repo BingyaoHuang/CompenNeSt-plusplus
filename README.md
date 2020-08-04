@@ -34,7 +34,7 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 ## Network architecture (training)
 ![train](doc/net_train.png)
 
-## CompenNeSt++ inferred projector input vs iteration (training)
+## CompenNeSt++ inferred projector input as as training progresses
 <p align="center">
   <img width="800"  src='doc/train_animation.gif'>
 </p>
@@ -106,7 +106,7 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 ## Apply CompenNeSt++ to your own setup
 
 1. For a nonplanar textured projection surface, adjust the camera-projector such that the brightest projected input image (plain white `data/ref/img_0125.png`) slightly overexposes the camera captured image. Similarly, the darkest projected input image (plain black `data/ref/img_0001.png`) slightly underexposes the camera captured image. This allows the projector dynamic range to cover the full camera dynamic range. 
-2. Once the setup is fixed, we create a setup data directory `data/light[n]/pos[m]/[surface]` (we refer it to `data_root`), where `[n]` and `[m]` are lighting and pose setup indices, respectively. `[surface]` is the projection surface's texture name.
+2. Create a setup data directory `data/light[n]/pos[m]/[surface]` (we refer it to `data_root`), where `[n]` and `[m]` are lighting and pose setup indices, respectively. `[surface]` is the projection surface's texture name.
 3. Project and capture the plain black `data/ref/img_0001.png` and the plain white images `data/ref/img_0125.png` for projector FOV mask detection later. Then, save the captured images to `data_root/cam/raw/ref/img_0001.png(img_0125.png)`.
 4. Project and capture a surface image `data/ref/img_gray.png`. Then, save the captured images to `data_root/cam/raw/ref/img_0126.png`.
 5. Project and capture the training and validation images in `data/train` and `/data/test`. Then, save the captured images to  `data_root/cam/raw/train`,  `data_root/cam/raw/test`, respectively.
@@ -114,11 +114,17 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 7. Update `data_list` in [`train_compenNeSt++.py`](src/python/train_compenNeSt++.py) (or [`train_pre-trained_compenNeSt++.py`](src/python/train_pre-trained_compenNeSt++.py) that only requires 8 training images) and run the script.
 8. Project the compensated projector input images under `data_root/prj/cmp/test/[model]`.
    
-Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, the rest plain color  images are used by original TPS w/ SL method, we don't need them to train CompenNeSt++. Similarly, `data_root/cam/raw/sl` and `data_root/cam/warpSL` are only used by two-step methods.
+Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, the rest plain color  images are used by the original TPS w/ SL method, we don't need them to train CompenNeSt++. Similarly, `data_root/cam/raw/sl` and `data_root/cam/warpSL` are only used by two-step methods, e.g., [train_CompenNeSt_with_SL.py](src/python/train_CompenNeSt_with_SL.py).
 
 ----
 
 ## Citation
+    @article{huang2020endtoend,
+        title={End-to-end Full Projector Compensation},
+        author={Bingyao Huang and Tao Sun and Haibin Ling},
+        year={2020},
+        journal={arXiv preprint arXiv:2008.00965} }
+
     @inproceedings{huang2019CompenNeSt++,
         author = {Huang, Bingyao and Ling, Haibin},
         title = {CompenNeSt++: End-to-end Full Projector Compensation},
@@ -132,7 +138,6 @@ Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, t
         booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
         month = {June},
         year = {2019} }
-
 
 
 ## Acknowledgments
