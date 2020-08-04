@@ -14,10 +14,11 @@ Highlights:
 *  The proposed **CompenNeSt++** is the **first end-to-end full** projector compensation system.
 *  **CompenNeSt++** significantly outperforms [CompenNet++ (ICCV'19)][7] and has 27.7% less parameters. 
 *  We propose a **pre-trained** CompenNeSt++ that can work with **only 8 images** and **3 min** training time (see **CompeNeSt++ pre** in the figure above).
+*  We perform in-depth ablation studies and **show what features are learned by CompenNeSt++ and how the compensation is performed in the feature space**. Such studies were not available in our previous papers.
 *  Compared with two-step methods, CompenNeSt++ not only is **fully differentiable** but also learns the geometric correction **without** an additional step of structured light and outperforms the traditional two-step methods (e.g., TPS w/ SL).
-*  Two task-specific weight initializations and two network simplification techniques are proposed to further improve the convergence and running time efficiency of CompenNeSt++.
-*  For the first time, a synthetic data-based pre-training method is proposed to significantly improve the practical efficiency of our system.
-*  For the first time, a setup-independent full compensation benchmark and a partial photometric compensation benchmark are constructed.
+*  Two task-specific **weight initializations** and two **network simplification** techniques are proposed to further improve the convergence and running time efficiency of CompenNeSt++.
+*  For the first time, a **synthetic data-based pre-training method** is proposed to significantly improve the practical efficiency of our system.
+*  For the first time, a setup-independent **full compensation benchmark** and a **partial photometric compensation benchmark** are constructed.
 
 For more info please refer to our [journal paper][1] and [supplementary material (~90M)][2]. 
 
