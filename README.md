@@ -34,7 +34,7 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 ## Network architecture (training)
 ![train](doc/net_train.png)
 
-## CompenNeSt++ inferred projector input as as training progresses
+## CompenNeSt++ inferred projector input as training progresses
 <p align="center">
   <img width="800"  src='doc/train_animation.gif'>
 </p>
@@ -119,13 +119,13 @@ Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, t
 ----
 
 ## Citation
-    @article{huang2020endtoend,
+    @article{huang2020CompenNeSt++,
         title={End-to-end Full Projector Compensation},
         author={Bingyao Huang and Tao Sun and Haibin Ling},
         year={2020},
         journal={arXiv preprint arXiv:2008.00965} }
 
-    @inproceedings{huang2019CompenNeSt++,
+    @inproceedings{huang2019CompenNet++,
         author = {Huang, Bingyao and Ling, Haibin},
         title = {CompenNeSt++: End-to-end Full Projector Compensation},
         booktitle = {IEEE International Conference on Computer Vision (ICCV)},
