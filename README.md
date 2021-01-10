@@ -1,14 +1,14 @@
 <!-- <img src='doc/train_animation.gif' align="right" width=300>
 <br><br> -->
 
-End-to-end Full Projector Compensation
+End-to-end Full Projector Compensation (PAMI)
 <br><br>
 ===
 
 ![result1](doc/real_projection.png)
 
 ## Introduction
-PyTorch implementation of [CompenNeSt++][1], a journal extension of [CompenNet (CVPR'19)][5] and [CompenNet++ (ICCV'19)][7]
+PyTorch implementation of [CompenNeSt++ (PAMI)][1], a journal extension of [CompenNet (CVPR'19)][5] and [CompenNet++ (ICCV'19)][7]
 
 Highlights:
 *  The proposed **CompenNeSt++** is the **first end-to-end full** projector compensation system.
@@ -20,7 +20,7 @@ Highlights:
 *  For the first time, a **synthetic data-based pre-training method** is proposed to significantly improve the practical efficiency of our system.
 *  For the first time, a setup-independent **full compensation benchmark** and a **partial photometric compensation benchmark** are constructed.
 
-For more info please refer to our [journal paper][1] and [supplementary material (~90M)][2]. 
+For more info please refer to our [PAMI paper][1] and [supplementary material (~90M)][2]. 
 
 ---
 
@@ -122,8 +122,8 @@ Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, t
     @article{huang2020CompenNeSt++,
         title={End-to-end Full Projector Compensation},
         author={Bingyao Huang and Tao Sun and Haibin Ling},
-        year={2020},
-        journal={arXiv preprint arXiv:2008.00965} }
+        year={2021},
+        journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)} }
 
     @inproceedings{huang2019CompenNet++,
         author = {Huang, Bingyao and Ling, Haibin},

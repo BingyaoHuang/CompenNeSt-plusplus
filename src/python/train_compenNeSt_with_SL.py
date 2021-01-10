@@ -20,11 +20,11 @@ See trainNetwork.py for detailed training process.
 See utils.py for helper functions.
 
 Citation:
-    @article{huang2020endtoend,
+    @article{huang2020CompenNeSt++,
         title={End-to-end Full Projector Compensation},
         author={Bingyao Huang and Tao Sun and Haibin Ling},
-        year={2020},
-        journal={arXiv preprint arXiv:2008.00965} }
+        year={2021},
+        journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)} }
 
     @inproceedings{huang2019compennet++,
         author = {Huang, Bingyao and Ling, Haibin},

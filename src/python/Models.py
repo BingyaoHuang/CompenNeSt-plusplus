@@ -1,5 +1,5 @@
 '''
-CompenNet (cvpr'19), CompenNet++ (iccv'19), CompenNeSt/CompenNeSt++ (journal extension) CNN models
+CompenNet (cvpr'19), CompenNet++ (iccv'19), CompenNeSt/CompenNeSt++ (PAMI) CNN models
 '''
 
 import torch
