@@ -67,4 +67,4 @@ We thank the authors of the colorful textured sampling images.
 [2]: https://www3.cs.stonybrook.edu/~hling/publication/CompenNet++_sup-high-res.pdf
 [3]: https://github.com/BingyaoHuang/CompenNeSt-plusplus
 [4]: https://github.com/BingyaoHuang/CompenNet
-[5]: https://bingyaohuang.github.com/pub/CompenNeSt++/full_cmp_data
+[5]: https://bingyaohuang.github.io/pub/CompenNeSt++/full_cmp_data
