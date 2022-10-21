@@ -1,9 +1,7 @@
-
-
-[End-to-end Full Projector Compensation][3] Dataset
+End-to-end Full Projector Compensation Dataset
 ===
 
-This folder should contain CompenNeSt++ dataset. You can download and extract our [dataset (~11G)][5] here. 
+This folder should contain CompenNeSt++ dataset. You can download and extract our [dataset (~11G)][1] here.
 
 
 ## Folder Structure
@@ -63,8 +61,5 @@ This folder should contain CompenNeSt++ dataset. You can download and extract ou
 We thank the anonymous reviewers for valuable and inspiring comments and suggestions.
 We thank the authors of the colorful textured sampling images. 
 
-[1]: https://github.com/BingyaoHuang/CompenNet-plusplus
-[2]: https://www3.cs.stonybrook.edu/~hling/publication/CompenNet++_sup-high-res.pdf
-[3]: https://github.com/BingyaoHuang/CompenNeSt-plusplus
-[4]: https://github.com/BingyaoHuang/CompenNet
-[5]: https://bingyaohuang.github.io/pub/CompenNeSt++/full_cmp_data
+
+[1]: https://bingyaohuang.github.io/pub/CompenNeSt++/full_cmp_data
