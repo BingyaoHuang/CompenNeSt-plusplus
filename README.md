@@ -152,7 +152,7 @@ This software is freely available for non-profit non-commercial use, and may be 
 
 
 [1]: https://bingyaohuang.github.io/pub/CompenNeSt%2B%2B/
-[2]: https://bingyaohuang.github.io/pub/CompenNeSt_supp
+[2]: https://bingyaohuang.github.io/pub/CompenNeSt++/supp
 [3]: https://bingyaohuang.github.io/pub/CompenNeSt++/full_cmp_data
 [4]: https://www.mathworks.com/help/vision/ref/detectcheckerboardpoints.html
 [5]: https://github.com/BingyaoHuang/CompenNet
