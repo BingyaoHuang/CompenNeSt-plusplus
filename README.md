@@ -1,14 +1,14 @@
 <!-- <img src='doc/train_animation.gif' align="right" width=300>
 <br><br> -->
 
-End-to-end Full Projector Compensation (PAMI)
+End-to-end Full Projector Compensation (TPAMI)
 <br><br>
 ===
 
 ![result1](doc/real_projection.png)
 
 ## Introduction
-PyTorch implementation of [CompenNeSt++ (PAMI)][1], a journal extension of [CompenNet (CVPR'19)][5] and [CompenNet++ (ICCV'19)][7]
+PyTorch implementation of [CompenNeSt++ (TPAMI)][1], a journal extension of [CompenNet (CVPR'19)][5] and [CompenNet++ (ICCV'19)][7]
 
 Highlights:
 *  The proposed **CompenNeSt++** is the **first end-to-end full** projector compensation system.
@@ -20,7 +20,7 @@ Highlights:
 *  For the first time, a **synthetic data-based pre-training method** is proposed to significantly improve the practical efficiency of our system.
 *  For the first time, a setup-independent **full compensation benchmark** and a **partial photometric compensation benchmark** are constructed.
 
-For more info please refer to our [PAMI paper][1] and [supplementary material (~90M)][2]. 
+For more info please refer to our [TPAMI paper][1] and [supplementary material (~90M)][2]. 
 
 ---
 
@@ -52,8 +52,8 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 ## Prerequisites
 * PyTorch compatible GPU
 * Python 3
-* PyTorch >= 1.2.0
-* opencv-python 3.4.4
+* PyTorch == 1.2.0
+* opencv-python >= 3.4.4 (since 3.4.4 is no longer suported by pip, you may use 4.x instead)
 * visdom (for visualization)
 
 ## Benchmark dataset
