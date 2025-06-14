@@ -29,7 +29,7 @@ def resetRNGseed(seed):
 # read images using multi-thread
 def readImgsMT(img_dir, size=None, index=None, gray_scale=False, normalize=False):
     img_dataset = SimpleDataset(img_dir, index=index, size=size)
-    data_loader = DataLoader(img_dataset, batch_size=len(img_dataset), shuffle=False, drop_last=False, num_workers=4)
+    data_loader = DataLoader(img_dataset, batch_size=len(img_dataset), shuffle=False, drop_last=False, num_workers=4) # num_workers>1 only works for linux
 
     for i, imgs in enumerate(data_loader):
         # imgs.permute((0, 3, 1, 2)).to('cpu', dtype=torch.float32)/255
