@@ -51,7 +51,7 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 
 ## Prerequisites
 * PyTorch compatible GPU
-* Python 3
+* Python 3.7
 * PyTorch == 1.2.0
 * opencv-python >= 3.4.4 (since 3.4.4 is no longer suported by pip, you may use 4.x instead)
 * visdom (for visualization)
@@ -67,39 +67,54 @@ We disentangle the **geometry** and **photometry** from the complex projector-ca
 1. Set up the Environment: Create a new conda environment:
 
         conda create --name CompenNeSt-plusplus python=3.7
-        # Activate the environment
-        conda activate CompenNeSt-plusplus # Linux/macOS
-        activate CompenNeSt-plusplus # Windows
+
+        # Activate the environment (Linux)
+        conda activate CompenNeSt-plusplus 
+        
+        # Activate the environment (Windows)
+        activate CompenNeSt-plusplus 
 2. Clone this repo:
    
         git clone https://github.com/BingyaoHuang/CompenNeSt-plusplus
         cd CompenNeSt-plusplus
 
-3. Install required packages by typing. Check https://pytorch.org/get-started/previous-versions/ if failed to install older PyTorch.
+3. Install required packages by typing:
    
         pip install -r requirements.txt
-    
 
-5. Download CompenNeSt++ [full compensation dataset][3] and extract to [`data/`](data)
+4. Check https://pytorch.org/get-started/previous-versions/ if failed to install older PyTorch and Torchvision.**Take Windows + CUDA 10.0 + Python 3.7 as an example**:
+   
+        pip install https://download.pytorch.org/whl/cu100/torch-1.2.0-cp37-cp37m-win_amd64.whl
+        pip install https://download.pytorch.org/whl/cu100/torchvision-0.4.0-cp37-cp37m-win_amd64.whl
 
 
-6. Start **visdom** by typing
+5. Download CompenNeSt++ [full compensation dataset][3] and extract to [`data/`](data).
+
+
+8. Start **visdom** by typing:
 
         visdom
 
-7. Once visdom is successfully started, visit [`http://localhost:8097`](http://localhost:8097) (train locally) or `http://serverhost:8097` (train remotely).
-8. Open [`train_compenNeSt++.py`](src/python/train_compenNeSt++.py) and set which GPUs to use. An example is shown below, we use GPU 0, 2 and 3 to train the model.
+9. Once visdom is successfully started, visit [`http://localhost:8097`](http://localhost:8097) (train locally) or `http://serverhost:8097` (train remotely).
+
+10. Open [`train_compenNeSt++.py`](src/python/train_compenNeSt++.py) and set which GPUs to use. An example is shown below, e.g., specify GPU 0, 2 and 3 for training.
    
         os.environ['CUDA_VISIBLE_DEVICES'] = '0, 2, 3'
         device_ids = [0, 1, 2]
 
 
-9. Run [`train_compenNeSt++.py`](src/python/train_compenNeSt++.py) to start training and testing
+11. Open [`utils.py`](src/python/utils.py) and set [`num_workers`](src/python/utils.py#L32) parameter according to your OS:
+    
+        data_loader = DataLoader(img_dataset, ..., num_workers=0) # Windows
+        data_loader = DataLoader(img_dataset, ..., num_workers=4) # Ubuntu
+
+12. Run [`train_compenNeSt++.py`](src/python/train_compenNeSt++.py) to start training and testing:
 
         cd src/python
         python train_compenNeSt++.py
-10. The training and validation results are updated in the browser during training. An example is shown below, where the 1st figure shows the training and validation loss, rmse and ssim curves. The 2nd and 3rd montage figures are the training and validation pictures, respectively. In each montage figure, the **1st rows are the camera captured uncompensated images (\tilde{x}), the 2nd rows are CompenNeSt++ inferred projector input images (\hat{x}) and the 3rd rows are ground truth of projector input images (x)**. 
-11. The quantitative comparison results will be saved to `log/%Y-%m-%d_%H_%M_%S.txt` after training.
+
+13. The training and validation results are updated in the browser during training. An example is shown below, where the 1st figure shows the training and validation loss, rmse and ssim curves. The 2nd and 3rd montage figures are the training and validation pictures, respectively. In each montage figure, the **1st rows are the camera captured uncompensated images (\tilde{x}), the 2nd rows are CompenNeSt++ inferred projector input images (\hat{x}) and the 3rd rows are ground truth of projector input images (x)**. 
+14. The quantitative comparison results will be saved to `log/%Y-%m-%d_%H_%M_%S.txt` after training.
    
 <!-- ![visdom](doc/training_progress.png) -->
 <!-- <img src='doc/training_progress.png' align="auto" width=700> -->
@@ -126,24 +141,31 @@ Note other than `ref/img_0001.png`, `ref/img_0125.png` and `ref/img_gray.png`, t
 
 ## Citation
     @article{huang2020CompenNeSt++,
-        title={End-to-end Full Projector Compensation},
-        author={Bingyao Huang and Tao Sun and Haibin Ling},
-        year={2021},
-        journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)} }
+        title = {{End-to-End Full Projector Compensation}},
+        author = {Huang, Bingyao and Sun, Tao and Ling, Haibin},
+        year = {2022},
+        month = jun,
+        journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+        volume = {44},
+        number = {6},
+        pages = {2953--2967},
+        issn = {1939-3539},
+        doi = {10.1109/TPAMI.2021.3050124}}
 
     @inproceedings{huang2019CompenNet++,
         author = {Huang, Bingyao and Ling, Haibin},
-        title = {CompenNeSt++: End-to-end Full Projector Compensation},
+        title = {{CompenNet++: End-to-end Full Projector Compensation}},
         booktitle = {IEEE International Conference on Computer Vision (ICCV)},
         month = {October},
         year = {2019} }
 
     @inproceedings{huang2019compennet,
         author = {Huang, Bingyao and Ling, Haibin},
-        title = {End-To-End Projector Photometric Compensation},
+        title = {{End-To-End Projector Photometric Compensation}},
         booktitle = {IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
         month = {June},
         year = {2019} }
+
 
 
 ## Acknowledgments
